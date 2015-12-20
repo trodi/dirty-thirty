@@ -9,10 +9,12 @@
 </head>
 <body ng-app="dirtyThirty" ng-cloak ng-controller="ReasonCtrl as ctrl">
     <h1>Title</h1>
-    <button ng-click="ctrl.setDaily()">Reason of the Day</button>
-    <button ng-click="ctrl.setRandom()">Random Reason</button>
-    <button ng-click="ctrl.setAll()">All Reasons</button>
     <ul class="reasons">
+        <li class="reason">
+            <a href="#" class="button" ng-click="ctrl.setDaily()">Reason of the Day</a>
+            <a href="#" class="button" ng-click="ctrl.setRandom()">Random Reason</a>
+            <a href="#" class="button" ng-click="ctrl.setAll()">All Reasons</a>
+        </li>
         <li ng-repeat="reason in ctrl.reasons track by $index" class="reason">
             {{reason}}
         </li>

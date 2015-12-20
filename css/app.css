@@ -8,6 +8,14 @@ body {
 ul {
     padding: 0px;
 }
+.button {
+    list-style: none;
+    padding: 5px;
+    border: 1px solid #ededed;
+    border-radius: 3px;
+    text-decoration: none;
+    color: inherit;
+}
 .reasons {
     background: #fff;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),
