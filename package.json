@@ -10,6 +10,7 @@
   "license": "MIT",
   "homepage": "https://github.com/trodi/dirty-thirty#readme",
   "dependencies": {
-    "angular": "^1.4.8"
+    "angular": "^1.4.8",
+    "bootstrap": "^3.3.6"
   }
 }

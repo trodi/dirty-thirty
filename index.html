@@ -2,22 +2,28 @@
 <html>
 <head>
     <title>Dirty Thirty</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/app.css">
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script> -->
     <script src="node_modules/angular/angular.min.js"></script>
     <script src="js/app.js"></script>
 </head>
 <body ng-app="dirtyThirty" ng-cloak ng-controller="ReasonCtrl as ctrl">
+<div class="container">
     <h1>Title</h1>
-    <ul class="reasons">
-        <li class="reason">
-            <a href="#" class="button" ng-click="ctrl.setDaily()">Reason of the Day</a>
-            <a href="#" class="button" ng-click="ctrl.setRandom()">Random Reason</a>
-            <a href="#" class="button" ng-click="ctrl.setAll()">All Reasons</a>
-        </li>
-        <li ng-repeat="reason in ctrl.reasons track by $index" class="reason">
-            {{reason}}
-        </li>
-    </ul>
+    <div class="row">
+        <div class="center-block reasons">
+            <ul>
+                <li class="reason">
+                    <a href="#" class="button" ng-click="ctrl.setDaily()">Reason of the Day</a>
+                    <a href="#" class="button" ng-click="ctrl.setRandom()">Random Reason</a>
+                    <a href="#" class="button" ng-click="ctrl.setAll()">All Reasons</a>
+                </li>
+            </ul>
+            <ul><li ng-repeat="reason in ctrl.reasons track by $index" class="reason">
+                {{reason}}
+            </li></ul>
+        </div>
+    </div>
+</div>
 </body>
 </html>

@@ -6,7 +6,7 @@ angular.module("dirtyThirty", [])
 
         /* set reasons to reason for today */
         ctrl.setDaily = function() {
-            var todayReason = ReasonService.reasons[today];
+            var todayReason = ReasonService.reasons[today - 1]; // 0 index based
             if (!todayReason) { // just in case we miss a date
                 todayReason = ReasonService.reasons[0];
             }
