@@ -9,14 +9,15 @@
 </head>
 <body ng-app="dirtyThirty" ng-cloak ng-controller="ReasonCtrl as ctrl">
 <div class="container">
-    <h1>Title</h1>
+    <h1>Why I Love My Wife</h1>
+    <h5>Happy 30th Birthday!</h5>
     <div class="row">
         <div class="center-block reasons">
             <ul>
                 <li class="reason">
-                    <a href="#" class="button" ng-click="ctrl.setDaily()">Reason of the Day</a>
-                    <a href="#" class="button" ng-click="ctrl.setRandom()">Random Reason</a>
-                    <a href="#" class="button" ng-click="ctrl.setAll()">All Reasons</a>
+                    <a href="#" class="button" ng-class="{active: ctrl.selected === 'daily'}" ng-click="ctrl.setDaily()">Reason of the Day</a>
+                    <a href="#" class="button" ng-class="{active: ctrl.selected === 'random'}" ng-click="ctrl.setRandom()">Random Reason</a>
+                    <a href="#" class="button" ng-class="{active: ctrl.selected === 'all'}" ng-click="ctrl.setAll()">All Reasons</a>
                 </li>
             </ul>
             <ul><li ng-repeat="reason in ctrl.reasons track by $index" class="reason">
